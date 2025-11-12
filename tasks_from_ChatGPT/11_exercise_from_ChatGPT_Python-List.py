@@ -19,8 +19,14 @@
 # Очікуваний результат (приклад):
 #
 # ['хліб', 'кефір', 'яйця', 'яблука', 'кава']
+
+# shopping_list = ["bread", "milk", "eggs", "cheese", "apple"]
+# shopping_list.append("cofee")
+# shopping_list.remove("cheese")
+# shopping_list[1] = "kefir"
 #
-#
+# print(shopping_list)
+
 #  End of exercise 1
 #
 #
@@ -40,14 +46,11 @@
 # Виведи результат у форматі:
 #
 # Середня оцінка: 10.0
-#
-#
-# Підказка:
-# Можеш використати функції sum() і len():
-#
-# average = sum(grades) / len(grades)
-#
-#
+
+# grades = [12, 8, 10, 11, 9]
+# average = sum(grades)/len(grades)
+# print(average)
+
 #  End of exercise 2
 #
 #
@@ -71,5 +74,17 @@
 #
 # Якщо немає → виведи "Такого фільму немає у списку."
 #
+# movies = ["alone at home", "mask", "batman", "friends", "2012"]
+# print ( movies[0] )
+# print ( movies[4] )
+# print ( movies[:3] )
 #
+# print ("            ")
+#
+# movie = input("Enter your favorite movie:")
+# # print("Your favorite movie is:", movie)
+# if movie in movies:
+#     print("Movie is at list")
+# else:
+#     print("Movie is not in list")
 #  End of exercise 3
