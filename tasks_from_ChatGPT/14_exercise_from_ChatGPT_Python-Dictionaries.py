@@ -1,103 +1,133 @@
 #  Start of Exercise 1
-# Завдання 1 — Фільтрація унікальних значень
+# Завдання 1: Книга контактів
 #
-# Створи програму, яка:
+# Створи словник contacts, де ключ — ім’я людини, а значення — інший словник з інформацією:
 #
-# Приймає список чисел (із повтореннями).
+# телефон
 #
-# Перетворює його на множину та повертає тільки унікальні елементи.
+# email
 #
-# Виводить:
+# Приклад структури (на твій розсуд):
 #
-# початковий список
+# contacts = {
+#     "Ivan": {"phone": "123456", "email": "ivan@example.com"},
+#     ...
+# }
 #
-# множину унікальних значень
+# Твоє завдання:
 #
-# кількість унікальних елементів
+# Вивести всі імена (ключі).
 #
-# Приклад вводу:
+# Для кожної людини вивести її телефон та email у форматі:
 #
-# [1, 2, 2, 3, 4, 4, 5]
-#
-#
-# Приклад виводу:
-#
-# Initial list: [...]
-# Unique values: {1, 2, 3, 4, 5}
-# Count: 5
+# Ivan - phone: 123456, email: ivan@example.com
 
-# initial_list = input("Enter your random number: ")
+# contacts = {
+#     "Ivan": {
+#         "phone": "123456",
+#         "email": "ivan@example.com",
+#     },
+#     "Ola": {
+#         "phone": "654321",
+#         "email": "ola@example.com",
+#     }
+# }
 #
-# unique_values = set(initial_list)
-# print(unique_values)
-# print(len(unique_values))
-
-#  End of exercise 1
+# print ( contacts.keys() )
+# print (f"Ivan - {contacts['Ivan']['phone']}, {contacts['Ivan']['email']} \nOla - {contacts['Ola']['phone']}, {contacts['Ola']['email']}")
+# End of exercise 1
 
 
 #  Start of Exercise 2
-# Завдання 2 — Порівняння множин
+# Завдання 2: Магазин і ціни
 #
-# У тебе є два набори товарів, що є в магазині:
+# Створи словник store, де:
 #
-# store1 = {"bread", "milk", "eggs", "coffee"}
-# store2 = {"milk", "tea", "chocolate", "bread"}
+# ключ — назва товару
 #
+# значення — його ціна (число)
 #
-# Напиши програму, яка виводить:
+# Наприклад:
 #
-# Товари, що є в обох магазинах (перетин).
+# store = {
+#     "apple": 20,
+#     "banana": 25,
+#     "milk": 35
+# }
 #
-# Товари, що є лише в першому магазині.
+# Твоє завдання:
 #
-# Товари, що є лише в другому магазині.
+# Додай новий товар у словник.
 #
-# Об’єднаний список усіх товарів без повторень.
-
-# store1 = {"bread", "milk", "eggs", "coffee"}
-# store2 = {"milk", "tea", "chocolate", "bread"}
-# print(store1.intersection(store2))
-# print(store1)
-# print(store2)
-# print(store1 | store2)
+# Зміни ціну існуючого товару.
+#
+# Видали один товар.
+#
+# Виведи всі товари та їхні ціни у форматі:
+#
+# apple: 20 грн
+# banana: 25 грн
+# milk: 35 грн
 
 #  End of exercise 2
 
-
+# store = {
+#     "apple": 20,
+#     "banana": 25,
+#     "milk": 35
+# }
+# store["egs"] = 15
+# store["apple"] = 10
+# store.pop("milk")
+#
+# print(store.items())
+# print(type(store))
 
 #  Start of Exercise 3
-# Завдання 3 — Меню ресторану (динамічне оновлення множини)
+# Завдання 3: Статистика учнів
 #
-# Створи множину menu, яка містить страви ресторану, наприклад:
+# Створи словник students, де:
 #
-# menu = {"pizza", "burger", "salad"}
+# ключ — ім’я студента
 #
+# значення — його оцінка (число від 1 до 12)
 #
-# Потім:
+# Наприклад:
 #
-# Додай у меню дві нові страви add().
+# students = {
+#     "Olena": 11,
+#     "Maksym": 9,
+#     "Sofia": 12
+# }
 #
-# Спробуй видалити страву, якої немає у меню, двома способами:
+# Твоє завдання:
 #
-# через remove()
+# Знайти і вивести середнє значення оцінок.
 #
-# через discard()
+# Вивести всіх учнів, які мають оцінку 10 і більше.
 #
-# Поясни на екрані різницю (наприклад, повідомленням).
-#
-# Виведи оновлене меню.
+# Вивести учня з найвищою оцінкою (ім’я + оцінка).
 
-menu = {"pizza", "burger", "salad"}
-menu.add("bread")
-menu.add("cake")
-print(menu)
+students = {
+    "Olena": 11,
+    "Maksym": 9,
+    "Sofia": 12
+}
 
-try:
-    menu.remove("salad")
-except KeyError:
-    print("remove(): ПОМИЛКА! Такої страви немає у меню.")
-print(menu)
+averageGrades = sum(students.values()) / len(students)
+print("Average grade:", averageGrades)
 
-menu.discard("pizza")
-print(menu)
-#  End of exercise 3
+print("Students who have a grades of 10 or higher : ")
+
+for keys, value in students.items():
+    if value >= 10:
+        print(keys)
+
+print ("   ")
+
+max_value = max(students.values())
+for keys, value in students.items():
+    if value == max_value:
+        print("Best student:\n", keys)
+
+# End of exercise 3
