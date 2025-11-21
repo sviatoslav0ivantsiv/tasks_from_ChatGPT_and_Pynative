@@ -5,7 +5,7 @@
 # Користувач вводить свій вік.
 # Ти маєш визначити:
 #
-# якщо вік < 0 → вивести: "Invalid age"
+# якщо вік <=0 → вивести: "Invalid age"
 #
 # якщо вік < 18 → "Access denied"
 #
@@ -13,6 +13,15 @@
 #
 # Підказка: використай input() та умовні оператори.
 
+
+# age = int(input("Enter your age:"))
+#
+# if age <= 0:
+#     print ("Invalid age")
+# elif age < 18:
+#     print ("Access denied")
+# else:
+#     print ("Access granted")
 
 # End of exercise 1
 
@@ -39,6 +48,16 @@
 #
 # Final price: X
 
+# price = 1200
+#
+# status = input("Enter your status: ")
+#
+# if status == "vip":
+#     print ( "Final price:", price*0.8 )
+# elif status == "regular":
+#     print ( "Final price:", price*0.9 )
+# else:
+#     print( "Final price:", price )
 
 #  End of exercise 2
 
@@ -67,4 +86,20 @@
 #
 # Student Oleh: Good
 
+student = {
+        "name": "Oleh",
+        "grade": 73
+}
+student["grade"] = 55
+
+if student["grade"] >= 90 :
+    print( "Student Oleh: Excellent")
+elif student["grade"] >= 75 and student["grade"] <= 89 :
+    print( "Student Oleh: Good")
+elif student["grade"] >= 60 and student["grade"] <= 74:
+    print("Student Oleh: Satisfactory")
+elif student["grade"] < 60:
+    print( "Student Oleh: Fail")
+
+# score = int(input("Enter your score: "))
 # End of exercise 3
