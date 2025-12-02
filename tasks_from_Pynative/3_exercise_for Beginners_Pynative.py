@@ -1,12 +1,10 @@
-#  Start of Exercise 1
-import numbers
+#  Start of Exercise 3
 
-# str = "PYnative"
-# consonants  = ""
-#
-# for letter in str:
-#     if letter.lower() not in 'aeiou':
-#         consonants += letter
-#         print (consonants)
-# for letter in range(0, 10, 2):
-#     print(letter)
+my_str = input('Enter a string: ')
+
+num_of_letters = len(my_str)
+
+for letter in range(0, num_of_letters, 2):
+    print(my_str[letter])
+
+#  Start of Exercise 3
