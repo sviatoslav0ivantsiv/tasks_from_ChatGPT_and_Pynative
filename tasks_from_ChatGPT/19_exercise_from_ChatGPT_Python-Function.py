@@ -13,6 +13,13 @@
 # 4 -> True
 # ...
 
+# def chek_even(num):
+#     for x in range(1, num):
+#         print (x, ">> even" if x % 2 == 0 else ">> odd")
+#
+# list = chek_even(21)
+# print (list )
+
 # End of exercise 1
 
 #  Start of Exercise 2
@@ -33,6 +40,18 @@
 
 #  End of exercise 2
 
+# def count_vowels(text):
+#     vowels = "aeiouAEIOU"
+#     vowels_letter = []
+#     for letter in text:
+#         if letter in vowels:
+#             vowels_letter.append(letter)
+#     number_of_vowels = len(vowels_letter)
+#     return number_of_vowels
+#
+# print(count_vowels("hello"))
+# print(count_vowels("python"))
+# print(count_vowels("beautiful day"))
 
 #  Start of Exercise 3
 # Завдання 3 — Функція, що повертає найбільше число зі списку
@@ -59,5 +78,26 @@
 # 9
 # -2
 
+# def my_max(numbers):
+#     return max(numbers)
+# print(my_max([3, 7, 1, 9, 4]))
+# print(my_max([-5, -2, -10]))
 
+# def my_max(numbers):
+#     largest = numbers[0]
+#     for number in numbers:
+#        if number > largest:
+#            largest = number
+#     return largest
+#
+# print(my_max([3, 7, 1, 9, 4]))
+# print(my_max([-5, -2, -10]))
+
+def my_max(numbers):
+    largest = sorted (numbers)
+    print (largest)
+    print (largest[-1])
+
+print(my_max([3, 7, 1, 9, 4]))
+print(my_max([-5, -2, -10]))
 # End of exercise 3
