@@ -45,3 +45,27 @@
 #
 # SameBus = Bus("Bus", 180, 12)
 # print(SameBus.seating_capacity())
+
+
+# OOP Exercise 5: Define a property that must have the same value for every class instance (object)
+# class Vehicle:
+#
+#     def __init__(self, name, max_speed, mileage):
+#         self.color = 'White'
+#         self.name = name
+#         self.max_speed = max_speed
+#         self.mileage = mileage
+#
+# class Bus(Vehicle):
+#     def bus_info(self):
+#         print( f"Color: {self.color}, Vehicle name: {self.name}, Speed: {self.max_speed}, Mileage: {self.mileage}")
+#
+# class Car(Vehicle):
+#     def cur_info(self):
+#         print(f"Color: {self.color}, Vehicle name: {self.name}, Speed: {self.max_speed}, Mileage: {self.mileage}")
+#
+# bus = Bus("Volvo", 180, 12)
+# car = Car("Audi Q5", 240, 18)
+#
+# bus.bus_info()
+# car.cur_info()
