@@ -8,6 +8,8 @@
 # modelS1 = Vehicle(300, 200)
 #
 # print(modelS1.max_speed, modelS1.mileage)
+import math
+
 
 # pynative OOP Exercise 2:
 # class Vehicle:
@@ -69,3 +71,103 @@
 #
 # bus.bus_info()
 # car.cur_info()
+
+
+# OOP Exercise 6: Class Inheritance
+# class Vehicle:
+#     def __init__(self, name, mileage, capacity):
+#         self.name = name
+#         self.mileage = mileage
+#         self.capacity = capacity
+#
+#     def fare(self):
+#         return self.capacity * 100
+#
+# class Bus(Vehicle):
+#
+#     def fare(self):
+#         amount = super().fare()
+#         amount += amount * 10/100
+#         return amount
+#
+# School_bus = Bus("School Volvo", 12, 50)
+# print("Total Bus fare is:", School_bus.fare() )
+#
+
+
+# OOP Exercise 7: Check type of an object
+# class Vehicle:
+#     def __init__(self, name, mileage, capacity):
+#         self.name = name
+#         self.mileage = mileage
+#         self.capacity = capacity
+#
+# class Bus(Vehicle):
+#     pass
+#
+#
+# School_bus = Bus("School Volvo", 12, 50)
+# print (type(School_bus))
+
+
+# OOP Exercise 8: Determine if School_bus is also an instance of the Vehicle class
+# class Vehicle:
+#     def __init__(self, name, mileage, capacity):
+#         self.name = name
+#         self.mileage = mileage
+#         self.capacity = capacity
+#
+# class Bus(Vehicle):
+#     pass
+#
+# School_bus = Bus("School Volvo", 12, 50)
+#
+# print(isinstance(School_bus, Vehicle)) #True
+# print(isinstance(Bus, Vehicle)) #False
+# print(issubclass(Bus, Vehicle)) #True Підклас
+
+# OOP Exercise 9: Check object is a subclass of a particular class
+# class Animal:
+#     pass
+#
+# class Dog(Animal):
+#     pass
+#
+# class Puppy(Dog):
+#     pass
+#
+# class Cat:
+#     pass
+#
+# print(issubclass(Dog, Animal))
+# print(issubclass(Animal, Dog))
+# print(issubclass( Cat, Animal))
+# print(issubclass(Puppy, Animal))
+
+# OOP Exercise 10: Calculate the area of different shapes using OOP
+class Shape:
+    def area(self):
+        raise NotImplementedError("Area method must be implemented by subclasses")
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    import math
+    def area(self):
+        return math.pi * math.pow(self.radius, 2)
+
+
+class Square(Shape):
+    def __init__(self, side):
+        self.side = side
+
+    import math
+    def area(self):
+        return math.pow(self.side, 2)
+
+# Example of polymorphism
+shapes = [Circle(5), Square(7), Circle(3)]
+
+for shape in shapes:
+    print(shape.area())  # Output: 78.53975, 49, 28.27431
